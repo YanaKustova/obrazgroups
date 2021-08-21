@@ -1,0 +1,245 @@
+* {
+    font-family: Montserrat;
+    font-style: normal; 
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("./bk.png");
+    background-size: cover;
+
+}
+
+.nav {
+    padding-top: 50px;
+    height: 100px;
+}
+
+.container-menu {
+    width: calc(100% - 20px);
+    max-width: 1264px;
+    margin: 0 auto;
+}
+
+.group-nav {
+    display: inline-block;
+    vertical-align: middle;
+    height: 70px;
+}
+
+.group-center {
+    margin-left: 300px;
+}
+
+.button-menu {
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+
+    padding: 20px 16px;
+    background: #ECA83B;
+    border-radius: 20px;
+    margin-top: 4px;
+}
+
+.link-menu {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #fff;
+}
+
+.workspace {
+    width: 100%;
+    height: calc(100% - 200px);
+}
+
+.w-258 {
+    width: 258px;
+    text-align: center;
+}
+
+.link-menu > div {
+    width: 32px;
+    height: 24px;
+    position: relative;
+}
+.link-menu > div > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.end {
+    float: right;
+}
+
+.mr-240 {
+    margin-right: 240px;
+}
+
+
+
+.main {
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 54px;
+    display: flex;
+    position: relative;
+}
+
+.main-info{
+    flex-grow: 1;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /*разюрасываем элементы по краям*/
+}
+
+
+
+.home-image path{
+    opacity:0;
+    cursor: pointer;
+}
+
+.home-image path:hover{
+    opacity:1;
+}
+
+
+.h1-title{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 88px;
+    color:#fff;
+
+}
+
+.main-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, - 50%);
+}
+
+.modal {
+    position: fixed; /*фиксированная позиция, поверх всего сайта*/
+    left: 0; /* приклеили к левому краю */
+    top: 0; /* приклеили к верху */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* полупрозрачный фоновый черный цвет */
+    display:flex; /* родительский элемент гибкий */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0); /*сожмется в 0*/
+    transition: opacity 0.2s;
+}
+
+/* когда модальное окно открыто опасити на 1 */
+.is-open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-dialog{
+    position: relative; /* чтобы кнопка крестика ориентировалась здесь */
+    max-width: 1000px;
+    min-height: 565px;
+    background-color:#fff;
+    flex-grow: 1;
+    display: flex;
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: transform 0.2s, opacity 0.2s;
+    transition-delay: 0.2s;
+}
+
+.is-open > .modal-dialog {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-image {
+    background-color: #EBEBEB;
+    width: 60%;
+    text-align: center; /* весь текст по центру */
+    padding: 50px;
+}
+
+.flats path {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.flats path:hover{
+    opacity: 1;
+}
+
+.modal-title {
+    font-family: 'Bebas Neue Cyrillic', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 10;
+    margin-bottom: 25px;
+}
+
+.modal-info {
+    width: 40%;
+    padding: 50px 46px;
+}
+
+.flat-list {
+    list-style: none; /* отключили точки */
+    margin-top: 55px;
+}
+
+.flat-item{
+    margin-bottom: 10px;
+}
+
+.flat-link {
+    font-size: 16px;
+    line-height: 19px;
+    color:#635854; 
+    text-decoration: none;
+}
+
+.flat-link:hover {
+    color: #3596F5;
+    text-decoration: underline; /* подчеркивается */
+
+}
+
+.modal-alert {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #635854;
+    margin-top: 56px;
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 27px;
+    top:38px;
+    cursor: pointer;
+    border:none;
+    background-color:#fff;
+
+}
+
